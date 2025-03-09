@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DISTA 2K25 - Annual Technical Event</title>
+    <link rel="icon" type="image/png" href="images/LOGO.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Loading Screen -->
+    <div class="loader-container">
+        <div class="loader">
+            <div class="loader-text">DISTA 2K25</div>
+            <div class="loader-bar"></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <header id="header">
+        <nav class="navbar">
+            <div class="container">
+                <a href="/" class="logo">DISTA<span>2K25</span></a>
+                <div class="nav-toggle" id="navToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#departments" class="nav-link">Departments</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#schedule" class="nav-link">Schedule</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                    <li><a href="#register" class="nav-link highlight">Register</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="particles-container" id="particles-js"></div>
+        <div class="container">
+            <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
+                <h1 class="glitch" data-text="DISTA 2K25">DISTA 2K25</h1>
+                <p class="subtitle">Unleashing Innovation Across Departments!</p>
+                <p class="event-date"><i class="fas fa-calendar-alt"></i> March 22, 2025 | 10:00 AM</p>
+                <div class="hero-cta">
+                    <a href="#departments" class="btn btn-primary">Explore Events</a>
+                    <a href="#register" class="btn btn-secondary">Register Now</a>
+                </div>
+                <div class="countdown-container">
+                    <div id="countdown">
+                        <div class="countdown-item">
+                            <span id="days">00</span>
+                            <p>Days</p>
+                        </div>
+                        <div class="countdown-item">
+                            <span id="hours">00</span>
+                            <p>Hours</p>
+                        </div>
+                        <div class="countdown-item">
+                            <span id="minutes">00</span>
+                            <p>Minutes</p>
+                        </div>
+                        <div class="countdown-item">
+                            <span id="seconds">00</span>
+                            <p>Seconds</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-down">
+            <a href="#departments">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Departments Section -->
+    <section id="departments" class="departments">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Our <span>Departments</span></h2>
+                <p>Explore events from different engineering branches</p>
+            </div>
+            <div class="departments-grid">
+                <!-- Computer Science (CSE) -->
+                <div class="department-card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <i class="fas fa-laptop-code card-icon"></i>
+                            <h3>Computer Science</h3>
+                        </div>
+                        <div class="card-back">
+                            <h3>CSE Events</h3>
+                            <p>Join our coding challenges and hackathons!</p>
+                            <div class="event-count">3 Events</div>
+                            <a href="departments/cs.html" class="btn">View Events</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Electronics Engineering -->
+                <div class="department-card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <i class="fas fa-microchip card-icon"></i>
+                            <h3>Electronics Engineering</h3>
+                        </div>
+                        <div class="card-back">
+                            <h3>Electronics Events</h3>
+                            <p>Explore electronics design competitions!</p>
+                            <div class="event-count">3 Events</div>
+                            <a href="departments/etc.html" class="btn">View Events</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mechanical Engineering -->
+                <div class="department-card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <i class="fas fa-cogs card-icon"></i>
+                            <h3>Mechanical Engineering</h3>
+                        </div>
+                        <div class="card-back">
+                            <h3>Mechanical Events</h3>
+                            <p>Participate in robotics and design challenges!</p>
+                            <div class="event-count">3 Events</div>
+                            <a href="departments/mechanical.html" class="btn">View Events</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Electrical Engineering -->
+                <div class="department-card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <i class="fas fa-bolt card-icon"></i>
+                            <h3>Electrical Engineering</h3>
+                        </div>
+                        <div class="card-back">
+                            <h3>Electrical Events</h3>
+                            <p>Participate in circuit design challenges!</p>
+                            <div class="event-count">3 Events</div>
+                            <a href="departments/electrical.html" class="btn">View Events</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Civil Engineering -->
+                <div class="department-card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <i class="fas fa-building card-icon"></i>
+                            <h3>Civil Engineering</h3>
+                        </div>
+                        <div class="card-back">
+                            <h3>Civil Events</h3>
+                            <p>Explore structural design competitions!</p>
+                            <div class="event-count">3 Events</div>
+                            <a href="departments/civil.html" class="btn">View Events</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text" data-aos="fade-right">
+                    <div class="section-header">
+                        <h2>About <span>DISTA 2K25</span></h2>
+                    </div>
+                    <p>DISTA 2K25 is our college's premier annual technical festival that brings together the brightest
+                        minds to showcase their talents, innovations, and technical prowess.</p>
+                    <p>This year's event features exciting competitions, workshops, tech talks, and networking
+                        opportunities across various engineering disciplines.</p>
+                    <div class="about-features">
+                        <div class="feature">
+                            <i class="fas fa-users"></i>
+                            <h4>500+ Participants</h4>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-trophy"></i>
+                            <h4>15 Events</h4>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-award"></i>
+                            <h4>Exciting Prizes</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image" data-aos="fade-left">
+                    <img src="images/DistaPoster.jpg" alt="DISTA Event">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section id="schedule" class="schedule">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Event <span>Schedule</span></h2>
+                <p>Mark your calendar for these exciting events</p>
+            </div>
+            <div class="timeline" data-aos="fade-up">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Opening Ceremony</h3>
+                        <p>10:00 AM - 11:00 AM | Main Auditorium</p>
+                        <p>Kickoff event with keynote speakers and event announcements</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Department Events - Round 1</h3>
+                        <p>11:30 AM - 1:30 PM | Various Venues</p>
+                        <p>First round of technical competitions across all departments</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Lunch Break</h3>
+                        <p>1:30 PM - 2:30 PM | College Cafeteria</p>
+                        <p>Networking and refreshments</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Department Events - Round 2</h3>
+                        <p>2:30 PM - 4:30 PM | Various Venues</p>
+                        <p>Final rounds of technical competitions</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Tech Showcase</h3>
+                        <p>4:30 PM - 5:30 PM | Exhibition Hall</p>
+                        <p>Display of innovative projects and research work</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Prize Distribution & Closing</h3>
+                        <p>5:30 PM - 6:30 PM | Main Auditorium</p>
+                        <p>Awards ceremony and closing remarks</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Register Section -->
+    <!-- Register Section -->
+<section id="register" class="register">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <h2>Register <span>Now</span></h2>
+            <p>Secure your spot for DISTA 2K25</p>
+        </div>
+        <div class="register-content" data-aos="fade-up">
+            <div class="register-info">
+                <div class="info-item">
+                    <i class="fas fa-calendar-check"></i>
+                    <h3>Event Date</h3>
+                    <p>March 22, 2025</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-clock"></i>
+                    <h3>Timing</h3>
+                    <p>10:00 AM - 6:30 PM</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Venue</h3>
+                    <p>College Campus</p>
+                </div>
+            </div>
+            <div class="register-cta">
+                <p>Registration is open for all departments and events. Click below to register!</p>
+
+                <!-- Dropdown Menu -->
+                <div class="dropdown">
+                    <button class="btn btn-primary btn-lg dropdown-toggle" onclick="toggleDropdown()">Register Now</button>
+                    <div class="dropdown-menu" id="dropdownMenu">
+                        <a href="departments/cs.html" class="dropdown-item">Computer Science Department</a>
+                        <a href="departments/etc.html" class="dropdown-item">Electronics Department</a>
+                        <a href="departments/mechanical.html" class="dropdown-item">Mechanical Department</a>
+                        <a href="departments/electrical.html" class="dropdown-item">Electrical Department</a>
+                        <a href="departments/civil.html" class="dropdown-item">Civil Department</a>
+                    </div>
+                </div>
+
+                <p class="note">* Registration closes on March 15, 2025</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Contact <span>Us</span></h2>
+                <p>Have questions? Reach out to us</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info" data-aos="fade-right">
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email<br></h3>
+                        <p>principal.nbnscoe@sinhgad.edu</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Address</h3>
+                        <p>Gat No. 38/1 B, Kegaon, Solapur Pune Highway, Solapur-413255 , MH, INDIA</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/nbnscoe/?hl=en" class="social-link"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/nbnscoe/" class="social-link"><i
+                                class="fab fa-facebook"></i></a>
+                        <a href="https://www.linkedin.com/school/sinhgadinstitutessolapur/posts/?feedView=all"
+                            class="social-link"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form" data-aos="fade-left">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>DISTA<span>2K25</span></h2>
+                    <p>Annual Technical Festival</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#departments">Departments</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#schedule">Schedule</a></li>
+                        <li><a href="#register">Register</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-departments">
+                    <h3>Departments</h3>
+                    <ul>
+                        <li><a href="departments/cs.html">Computer Science</a></li>
+                        <li><a href="departments/elc.html">Electronics</a></li>
+                        <li><a href="departments/mechanical.html">Mechanical</a></li>
+                        <li><a href="departments/electrical.html">Electrical</a></li>
+                        <li><a href="departments/civil.html">Civil</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 DISTA. All Rights Reserved.<br> N B Navale Sinhgad College of Engineering, Solapur.</p>
+                <a href="#home" class="back-to-top" id="backToTop">
+                    <i class="fas fa-arrow-up"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
