@@ -13,12 +13,15 @@ html {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 max(15px, 5%);
+    position: relative;
+    box-sizing: border-box;
 }
 
 .section-header {
     text-align: center;
     margin-bottom: 50px;
+    padding: 0 15px;
 }
 
 .section-header h2 {
@@ -34,7 +37,7 @@ html {
 
 .btn {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 12px 25px;
     font-size: 1em;
     font-weight: 600;
     text-align: center;
@@ -42,11 +45,14 @@ html {
     color: #fff;
     background-color: #007bff;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
 }
 
 .btn:hover {
     background-color: #0056b3;
+    transform: translateY(-2px);
 }
 
 .btn-primary {
@@ -58,7 +64,7 @@ html {
 }
 
 .btn-sm {
-    padding: 5px 10px;
+    padding: 8px 15px;
     font-size: 0.9em;
 }
 
@@ -97,6 +103,7 @@ html {
     color: #fff;
     text-decoration: none;
     letter-spacing: 1px;
+    z-index: 1001;
 }
 
 .logo span {
@@ -119,6 +126,7 @@ html {
     padding: 8px 15px;
     border-radius: 4px;
     transition: all 0.3s ease;
+    white-space: nowrap;
 }
 
 .nav-link:hover,
@@ -142,6 +150,7 @@ html {
     flex-direction: column;
     cursor: pointer;
     padding: 5px;
+    z-index: 1001;
 }
 
 .nav-toggle span {
@@ -167,7 +176,8 @@ html {
 /* Hero Section */
 .hero {
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
+    width: 100%;
     background-image: url('../images/NBNSCOE.jpg');
     background-size: cover;
     background-position: center;
@@ -176,10 +186,9 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
+    overflow: hidden;
 }
 
-/* Adding a black overlay with opacity */
 .hero::before {
     content: "";
     position: absolute;
@@ -187,112 +196,246 @@ html {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Adjust the opacity (0.5 = 50% black) */
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8));
     z-index: 1;
 }
 
-/* Ensure content stays above the overlay */
-.hero * {
-    position: relative;
-    z-index: 2;
-}
-
-
-.hero .particles-container {
+.particles-container {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 0;
+    z-index: 2;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    padding-top: 80px;
+    padding-bottom: 50px;
 }
 
 .hero-content {
-    position: relative;
-    z-index: 1;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.hero h1 {
-    font-size: 4em;
-    margin-bottom: 20px;
-    font-weight: 700;
+.hero h1.glitch {
+    font-size: 4.5em;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin: 0 0 20px;
+    position: relative;
+    text-shadow: 2px 2px 20px rgba(0, 123, 255, 0.2);
     letter-spacing: 2px;
+    line-height: 1.2;
+    width: 100%;
+}
+
+.hero h1.glitch::before,
+.hero h1.glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+}
+
+.hero h1.glitch::before {
+    left: 2px;
+    text-shadow: -2px 0 #ff0000;
+    animation: glitch-1 2s infinite linear alternate-reverse;
+}
+
+.hero h1.glitch::after {
+    left: -2px;
+    text-shadow: 2px 0 #00ff00;
+    animation: glitch-2 3s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-1 {
+    0%, 80%, 100% { opacity: 0; }
+    40%, 60% { opacity: 0.5; }
+}
+
+@keyframes glitch-2 {
+    0%, 80%, 100% { opacity: 0; }
+    40%, 60% { opacity: 0.5; }
+}
+
+.hero .event-date {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 1.2em;
+    padding: 10px 25px;
+    margin: 0 auto 30px;
+    background: rgba(0, 123, 255, 0.2);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    color: #fff;
+    position: relative;
+    z-index: 5;
+    white-space: nowrap;
+    width: max-content;
+}
+
+.hero .event-date i {
+    color: #007bff;
+    font-size: 1.1em;
+    display: inline-flex;
+    align-items: center;
 }
 
 .hero .subtitle {
     font-size: 1.5em;
-    margin-bottom: 30px;
+    margin: 0 auto 30px;
+    font-weight: 300;
+    max-width: 600px;
+    line-height: 1.4;
+    color: rgba(255, 255, 255, 0.9);
+    padding: 0 15px;
+    width: 100%;
 }
 
-.hero .event-date {
-    font-size: 1.2em;
+.hero-cta {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 40px;
+    width: 100%;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .hero-cta .btn {
-    margin: 0 10px;
+    flex: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 35px;
+    font-size: 1.1em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    text-align: center;
+    min-width: 180px;
+    white-space: nowrap;
+}
+
+.hero-cta .btn-primary {
+    background: var(--primary-color);
+    color: #fff;
+    border: 2px solid var(--primary-color);
+}
+
+.hero-cta .btn-secondary {
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
 }
 
 .countdown-container {
-    margin-top: 30px;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+    padding: 30px;
+    margin-top: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#countdown {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
 }
 
 .countdown-item {
-    display: inline-block;
-    margin: 0 10px;
-    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+    min-width: 90px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .countdown-item span {
+    font-size: 2.2em;
+    font-weight: 700;
     display: block;
-    font-size: 2em;
-    font-weight: 600;
+    line-height: 1;
+    margin-bottom: 5px;
 }
 
 .countdown-item p {
-    font-size: 1em;
-    margin-top: 5px;
+    margin: 0;
+    font-size: 0.9em;
+    opacity: 0.8;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
+/* Scroll Down Animation */
 .scroll-down {
     position: absolute;
-    bottom: 20px;
+    bottom: 30px;
     left: 50%;
     transform: translateX(-50%);
+    z-index: 2;
 }
 
 .scroll-down a {
-    display: block;
-    width: 30px;
-    height: 50px;
-    background: rgba(255, 255, 255, 0.5);
-    border-radius: 50px;
-    position: relative;
-    overflow: hidden;
+    padding: 10px;
+    display: inline-block;
 }
 
 .scroll-down span {
     display: block;
-    width: 5px;
-    height: 5px;
-    background: #fff;
-    border-radius: 50%;
-    position: absolute;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    animation: scroll 1.5s infinite;
+    width: 20px;
+    height: 20px;
+    border-bottom: 2px solid #fff;
+    border-right: 2px solid #fff;
+    transform: rotate(45deg);
+    margin: -10px;
+    animation: scrollDown 2s infinite;
 }
 
-@keyframes scroll {
+.scroll-down span:nth-child(2) {
+    animation-delay: -0.2s;
+}
+
+.scroll-down span:nth-child(3) {
+    animation-delay: -0.4s;
+}
+
+@keyframes scrollDown {
     0% {
-        top: 10px;
+        opacity: 0;
+        transform: rotate(45deg) translate(-20px, -20px);
+    }
+    50% {
         opacity: 1;
     }
-
     100% {
-        top: 30px;
         opacity: 0;
+        transform: rotate(45deg) translate(20px, 20px);
     }
 }
 
@@ -495,101 +638,79 @@ html {
 /* Schedule Section */
 .schedule {
     padding: 80px 0;
-    background-color: #f9f9f9;
+    background: #f8f9fa;
 }
 
-.timeline {
+.schedule-timeline {
     position: relative;
-    padding: 50px 0;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
 }
 
-.timeline::before {
+.schedule-timeline::before {
     content: '';
     position: absolute;
-    width: 2px;
-    background: var(--primary-color, #007bff);
+    left: 0;
     top: 0;
-    bottom: 0;
-    left: 50%;
-    margin-left: -1px;
+    height: 100%;
+    width: 2px;
+    background: #007bff;
 }
 
 .timeline-item {
+    position: relative;
+    padding-left: 45px;
     margin-bottom: 40px;
-    position: relative;
-    z-index: 1;
 }
 
-.timeline-item:hover {
-    z-index: 2;
+.timeline-item:last-child {
+    margin-bottom: 0;
 }
 
-.timeline-content {
-    position: relative;
-    background: #fff;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-    width: calc(50% - 30px);
-    transition: all 0.3s ease;
-    margin-bottom: 20px;
-}
-
-.timeline-item:nth-child(odd) .timeline-content {
-    margin-left: auto;
-}
-
-.timeline-content::before {
+.timeline-item::before {
     content: '';
     position: absolute;
+    left: -9px;
+    top: 0;
     width: 20px;
     height: 20px;
-    background: var(--primary-color, #007bff);
+    background: #007bff;
     border-radius: 50%;
-    top: 50%;
-    transform: translateY(-50%);
+    border: 4px solid #fff;
+    box-shadow: 0 0 0 2px #007bff;
 }
 
-.timeline-item:nth-child(odd) .timeline-content::before {
-    left: -40px;
-}
-
-.timeline-item:nth-child(even) .timeline-content::before {
-    right: -40px;
-}
-
-.timeline-date {
-    display: block;
+.timeline-time {
+    font-size: 1.1em;
     font-weight: 600;
+    color: #007bff;
     margin-bottom: 10px;
-    color: var(--primary-color, #007bff);
 }
 
 .timeline-title {
     font-size: 1.2em;
+    font-weight: 600;
     margin-bottom: 10px;
+    color: #222;
 }
 
-/* Ensure proper spacing between timeline items */
-.timeline-item:not(:last-child) {
-    margin-bottom: 60px;
+.timeline-description {
+    color: #666;
+    line-height: 1.6;
 }
 
-@media (max-width: 768px) {
-    .timeline::before {
-        left: 30px;
-    }
+.timeline-location {
+    font-size: 0.9em;
+    color: #555;
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
 
-    .timeline-content {
-        width: calc(100% - 60px);
-        margin-left: 60px !important;
-    }
-
-    .timeline-item:nth-child(odd) .timeline-content::before,
-    .timeline-item:nth-child(even) .timeline-content::before {
-        left: -40px;
-        right: auto;
-    }
+.timeline-location i {
+    color: #007bff;
 }
 
 /* Register Section */
@@ -1067,6 +1188,8 @@ html {
     background: var(--primary-color, #007bff);
     color: #fff;
     border: none;
+    justify-content: center;
+    align-items: center;
 }
 
 .button-group .btn-primary:hover {
