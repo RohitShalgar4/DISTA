@@ -1,15 +1,112 @@
 /* Responsive Styles */
 
-/* Mobile Styles */
-@media (max-width: 767px) {
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 10px 0;
+/* Extra Small Mobile Styles */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 max(10px, 3%);
     }
 
-    .navbar .container {
-        padding: 0 20px;
+    .logo {
+        font-size: 1.5em;
+    }
+
+    .hero {
+        min-height: 100vh;
+    }
+
+    .hero .container {
+        padding-top: 60px;
+        padding-bottom: 30px;
+    }
+
+    .hero-content {
+        padding: 15px;
+    }
+
+    .hero h1.glitch {
+        font-size: 2.5em;
+        margin-bottom: 15px;
+    }
+
+    .hero .event-date-wrapper {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .hero .event-date {
+        font-size: 0.9em;
+        padding: 8px 15px;
+        gap: 8px;
+        width: auto;
+        margin-bottom: 20px;
+    }
+
+    .hero .event-date i {
+        font-size: 0.9em;
+    }
+
+    .hero .subtitle {
+        font-size: 1.1em;
+        margin-bottom: 25px;
+        padding: 0 10px;
+    }
+
+    .hero-cta {
+        flex-direction: column;
+        gap: 15px;
+        padding: 0;
+        max-width: 100%;
+        width: 90%;
+    }
+
+    .hero-cta .btn {
+        width: 100%;
+        min-width: unset;
+        padding: 12px 20px;
+        font-size: 1em;
+    }
+
+    .countdown-container {
+        padding: 20px 15px;
+        margin: 20px 15px;
+        border-radius: 10px;
+    }
+
+    #countdown {
+        gap: 10px;
+    }
+
+    .countdown-item {
+        min-width: 65px;
+        padding: 12px 8px;
+    }
+
+    .countdown-item span {
+        font-size: 1.8em;
+    }
+
+    .countdown-item p {
+        font-size: 0.7em;
+    }
+
+    .scroll-down {
+        bottom: 20px;
+    }
+
+    .scroll-down span {
+        width: 8px;
+        height: 8px;
+    }
+}
+
+/* Mobile Styles */
+@media (min-width: 481px) and (max-width: 767px) {
+    .container {
+        padding: 0 max(15px, 4%);
+    }
+
+    .navbar {
+        padding: 10px 0;
     }
 
     .nav-menu {
@@ -17,7 +114,7 @@
         position: fixed;
         top: 0;
         left: -100%;
-        width: 80%;
+        width: 85%;
         height: 100vh;
         background: rgba(0, 0, 0, 0.95);
         backdrop-filter: blur(10px);
@@ -33,15 +130,10 @@
         display: flex;
         cursor: pointer;
         z-index: 1001;
-    }
-
-    .nav-toggle span {
-        display: block;
-        width: 25px;
-        height: 3px;
-        background-color: #fff;
-        margin: 5px 0;
-        transition: all 0.3s ease;
+        position: absolute;
+        right: max(15px, 4%);
+        top: 50%;
+        transform: translateY(-50%);
     }
 
     .nav-menu.active {
@@ -50,159 +142,385 @@
     }
 
     .nav-link {
-        font-size: 1.2em;
-        padding: 15px 25px;
-        width: 80%;
+        font-size: 1.1em;
+        padding: 12px 20px;
+        width: 85%;
         text-align: center;
     }
 
-    .nav-link.highlight {
-        width: auto;
-        margin: 10px 0;
+    .hero .container {
+        padding-top: 70px;
+        padding-bottom: 40px;
     }
 
-    .hero h1 {
+    .hero h1.glitch {
         font-size: 3em;
+        margin-bottom: 15px;
+    }
+
+    .hero .event-date-wrapper {
+        width: 90%;
+        margin-bottom: 25px;
+    }
+
+    .hero .event-date {
+        font-size: 1em;
+        padding: 8px 20px;
+        margin-bottom: 25px;
+        width: auto;
+    }
+
+    .hero .event-date i {
+        font-size: 1em;
     }
 
     .hero .subtitle {
         font-size: 1.2em;
+        margin-bottom: 25px;
+    }
+
+    .hero-cta {
+        flex-direction: column;
+        gap: 15px;
+        padding: 0;
+        max-width: 100%;
+        width: 90%;
+    }
+
+    .hero-cta .btn {
+        width: 100%;
+        min-width: unset;
+        padding: 12px 25px;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 12px 20px;
+    }
+
+    .countdown-container {
+        padding: 25px 20px;
+        margin: 25px 20px;
+    }
+
+    .countdown-item {
+        min-width: 75px;
+        padding: 15px 10px;
+    }
+
+    .countdown-item span {
+        font-size: 2em;
     }
 
     .departments-grid {
         grid-template-columns: 1fr;
+        gap: 25px;
+        padding: 0 max(15px, 4%);
     }
 
-    .about-content {
-        flex-direction: column;
+    .schedule-timeline {
+        padding: 20px max(15px, 4%);
+        margin: 0 max(15px, 4%);
     }
 
-    .about-text, .about-image {
-        flex: 1 1 100%;
+    .timeline-item {
+        padding-left: 35px;
+        margin-bottom: 30px;
     }
 
-    .register-content {
-        flex-direction: column;
+    .timeline-item::before {
+        left: -7px;
+        width: 14px;
+        height: 14px;
+        border-width: 3px;
     }
 
-    .register-info, .register-cta {
-        flex: 1 1 100%;
-    }
-
+    .about-content,
+    .register-content,
     .contact-content {
-        flex-direction: column;
-    }
-
-    .contact-info, .contact-form {
-        flex: 1 1 100%;
+        padding: 20px max(15px, 4%);
     }
 
     .footer-content {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .footer-links, .footer-departments, .footer-newsletter {
-        flex: 1 1 100%;
-        text-align: center;
-    }
-
-    /* Department Event Pages Responsive */
-    .department-hero {
-        height: 40vh;
-    }
-
-    .department-hero h1 {
-        font-size: 2.5em;
-    }
-
-    .department-hero p {
-        font-size: 1.2em;
-    }
-
-    .events-grid {
-        grid-template-columns: 1fr;
-        padding: 0 15px;
-    }
-
-    .event-card {
-        margin-bottom: 20px;
-    }
-
-    .event-meta {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .form-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .registration-form {
-        padding: 20px;
-        margin: 15px;
+        padding: 40px max(15px, 4%);
     }
 }
 
 /* Tablet Styles */
 @media (min-width: 768px) and (max-width: 1024px) {
-    .navbar {
-        padding: 12px 0;
+    .container {
+        padding: 0 max(25px, 5%);
+    }
+
+    .hero .container {
+        padding-top: 80px;
+        padding-bottom: 50px;
+    }
+
+    .hero h1.glitch {
+        font-size: 3.5em;
+        margin-bottom: 20px;
+    }
+
+    .hero .event-date-wrapper {
+        width: 80%;
+        margin-bottom: 25px;
+    }
+
+    .hero .event-date {
+        font-size: 1.1em;
+        padding: 10px 25px;
+        margin-bottom: 25px;
+        width: auto;
+    }
+
+    .hero .event-date i {
+        font-size: 1em;
+    }
+
+    .hero .subtitle {
+        font-size: 1.3em;
+        margin-bottom: 30px;
+    }
+
+    .hero-cta {
+        flex-direction: row;
+        gap: 20px;
+        max-width: 600px;
+        width: 90%;
+    }
+
+    .hero-cta .btn {
+        padding: 14px 30px;
+        min-width: 160px;
+    }
+
+    .countdown-container {
+        max-width: 80%;
+    }
+
+    .countdown-item {
+        min-width: 90px;
+    }
+
+    .hero-content,
+    .departments-grid,
+    .about-content,
+    .schedule-timeline,
+    .register-content,
+    .contact-content {
+        padding: 30px max(25px, 5%);
+    }
+
+    .hero {
+        padding: 90px 0 60px;
+    }
+
+    .hero-content {
+        padding: 30px max(25px, 5%);
+    }
+
+    .hero h1 {
+        font-size: 3.5em;
+    }
+
+    .hero .subtitle {
+        font-size: 1.3em;
+        max-width: 80%;
+        margin: 0 auto 30px;
+    }
+
+    .hero .event-date {
+        font-size: 1.1em;
+        padding: 12px 25px;
+    }
+
+    .hero-cta {
+        flex-direction: column;
+        gap: 12px;
+        margin-bottom: 25px;
+        padding: 0 max(25px, 5%);
+    }
+
+    .countdown-container {
+        padding: 25px;
+        width: 90%;
+        max-width: 600px;
+        margin: 30px auto;
+    }
+
+    .countdown-item {
+        min-width: 80px;
+    }
+
+    .countdown-item span {
+        font-size: 2em;
     }
 
     .departments-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+}
+
+/* Large Tablet & Small Desktop Styles */
+@media (min-width: 1025px) and (max-width: 1366px) {
+    .container {
+        max-width: 1140px;
+        padding: 0 max(30px, 6%);
     }
 
-    .nav-menu {
-        gap: 15px;
+    .hero .container {
+        padding-top: 90px;
+        padding-bottom: 60px;
     }
 
-    .nav-link {
-        font-size: 0.9em;
-        padding: 6px 12px;
+    .hero h1.glitch {
+        font-size: 4.5em;
+        margin-bottom: 15px;
     }
 
-    .about-content {
-        flex-direction: row;
+    .hero .event-date-wrapper {
+        width: 100%;
+        margin-bottom: 30px;
     }
 
-    .about-text, .about-image {
-        flex: 1 1 50%;
+    .hero .event-date {
+        font-size: 1.2em;
+        padding: 10px 30px;
+        margin-bottom: 30px;
+        width: auto;
     }
 
-    .register-content {
-        flex-direction: row;
+    .hero .event-date i {
+        font-size: 1em;
     }
 
-    .register-info, .register-cta {
-        flex: 1 1 50%;
+    .hero .subtitle {
+        font-size: 1.5em;
+        max-width: 70%;
+        margin: 0 auto 35px;
     }
 
+    .countdown-container {
+        max-width: 600px;
+    }
+
+    .countdown-item {
+        min-width: 100px;
+    }
+
+    .hero-content,
+    .departments-grid,
+    .about-content,
+    .schedule-timeline,
+    .register-content,
     .contact-content {
-        flex-direction: row;
+        padding: 40px max(30px, 6%);
     }
 
-    .contact-info, .contact-form {
-        flex: 1 1 50%;
+    .hero-content {
+        padding: 40px max(30px, 6%);
     }
 
-    .footer-content {
-        flex-direction: row;
-        justify-content: space-between;
+    .hero h1 {
+        font-size: 3.8em;
     }
 
-    .footer-links, .footer-departments, .footer-newsletter {
-        flex: 1 1 33%;
+    .hero .subtitle {
+        max-width: 70%;
+        margin: 0 auto 35px;
     }
 
-    /* Department Event Pages Responsive */
-    .department-hero h1 {
-        font-size: 3em;
+    .hero-cta {
+        flex-direction: column;
+        gap: 12px;
+        margin-bottom: 25px;
+        padding: 0 max(30px, 6%);
     }
 
-    .events-grid {
-        grid-template-columns: repeat(2, 1fr);
-        padding: 0 20px;
+    .countdown-container {
+        max-width: 700px;
+        margin: 35px auto;
+    }
+
+    .departments-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 35px;
+    }
+}
+
+/* Large Screens */
+@media (min-width: 1025px) {
+    .hero .container {
+        padding-top: 90px;
+        padding-bottom: 60px;
+    }
+
+    .hero h1.glitch {
+        font-size: 4.5em;
+        margin-bottom: 20px;
+    }
+
+    .hero .event-date-wrapper {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .hero .event-date {
+        font-size: 1.2em;
+        padding: 10px 30px;
+        margin-bottom: 30px;
+        width: auto;
+    }
+
+    .hero .event-date i {
+        font-size: 1em;
+    }
+
+    .hero .subtitle {
+        font-size: 1.5em;
+        margin-bottom: 35px;
+    }
+
+    .hero-cta {
+        gap: 25px;
+        max-width: 600px;
+    }
+
+    .hero-cta .btn {
+        padding: 15px 35px;
+        min-width: 200px;
+    }
+}
+
+/* Animation Responsiveness */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    .scroll-down {
+        display: none;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .container {
+        padding: 0;
+    }
+
+    .schedule-timeline::before,
+    .timeline-item::before {
+        display: none;
+    }
+
+    .timeline-item {
+        padding-left: 0;
+        page-break-inside: avoid;
     }
 }
